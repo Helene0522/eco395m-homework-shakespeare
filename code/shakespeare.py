@@ -17,7 +17,10 @@ def load_stopwords():
 
     stopwords = set()
 
-    # fill this in
+    with open(STOPWORDS_PATH, 'r', encoding='utf-8') as file:
+        for line in file:
+            line = line.strip().lower()
+            stopwords.add(re.sub(r'[^a-z]', '', line))
 
     return stopwords
 
@@ -27,27 +30,35 @@ def load_shakespeare_lines():
 
     shakespeare_lines = []
 
-    # fill this in
-
+    with open(SHAKESPEARE_PATH, 'r', encoding='utf-8') as file:
+        for _ in range(NUM_LINES_TO_SKIP):
+            next(file)
+        
+        for line in file:
+            if line.startswith(LAST_LINE_START):
+                break
+            line = line.strip()
+            if not (line.startswith('<<') and line.endswith('>>')):
+                shakespeare_lines.append(line)
     return shakespeare_lines
 
 
 def get_shakespeare_words(shakespeare_lines):
     """Takes the lines and makes a list of lowercase words."""
-
-    # fill this in
-
+    words = []
+    for line in shakespeare_lines:
+        clean_line = re.sub(r'[^a-z\s]', '', line.lower())
+        words.extend(clean_line.split())
     return words
 
 
 def count_words(words, stopwords):
     """Counts the words that are not stopwords.
     returns a dictionary with words as keys and values."""
-
-    word_counts = dict()
-
-    # fill this in
-
+    word_counts = {}
+    for word in words:
+        if word and word not in stopwords:
+            word_counts[word] = word_counts.get(word, 0) + 1
     return word_counts
 
 
@@ -55,7 +66,7 @@ def sort_word_counts(word_counts):
     """Takes a dictionary or word counts.
     Returns a list of (word, count) tuples that are sorted by count in descending order."""
 
-    # fill this in
+    sorted_word_counts = sorted(word_counts.items(), key=lambda item: item[1], reverse=True)
 
     return sorted_word_counts
 
@@ -63,19 +74,35 @@ def sort_word_counts(word_counts):
 def write_word_counts(sorted_word_counts, path):
     """Takes a list of (word, count) tuples and writes them to a CSV."""
 
-       # fill this in
+    with open(path, 'w', newline='', encoding='utf-8') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(['word', 'count'])
+        writer.writerows(sorted_word_counts)
 
 
 if __name__ == "__main__":
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-
+    print("Loading stopwords...")
     stopwords = load_stopwords()
+    print(f"Loaded {len(stopwords)} stopwords.")
 
+    print("Loading Shakespeare lines...")
     shakespeare_lines = load_shakespeare_lines()
+    print(f"Loaded {len(shakespeare_lines)} lines from Shakespeare.")
+
+    print("Processing words...")
     shakespeare_words = get_shakespeare_words(shakespeare_lines)
+    print(f"Processed {len(shakespeare_words)} words.")
 
+    print("Counting words...")
     word_counts = count_words(shakespeare_words, stopwords)
-    word_counts_sorted = sort_word_counts(word_counts)
+    print(f"Counted {len(word_counts)} unique words.")
 
+    print("Sorting word counts...")
+    word_counts_sorted = sort_word_counts(word_counts)
+    print("Word counts sorted.")
+
+    print("Writing word counts to CSV...")
     write_word_counts(word_counts_sorted, OUTPUT_PATH)
+    print(f"CSV file written to {OUTPUT_PATH}.")

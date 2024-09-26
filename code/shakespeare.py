@@ -29,16 +29,30 @@ def load_shakespeare_lines():
     "Loads every line in the dataset that was written by Shakespeare as a list of strings."
 
     shakespeare_lines = []
+    in_attribution = False
 
     with open(SHAKESPEARE_PATH, 'r', encoding='utf-8') as file:
         for _ in range(NUM_LINES_TO_SKIP):
             next(file)
-        
         for line in file:
             if line.startswith(LAST_LINE_START):
                 break
             line = line.strip()
-            if not (line.startswith('<<') and line.endswith('>>')):
+
+            if '<<' in line and '>>' in line:
+                line = re.sub(r'<<.*?>>', '', line)
+                if line:
+                    shakespeare_lines.append(line)
+                continue
+
+            if '<<' in line:
+                in_attribution = True
+
+            if '>>' in line:
+                in_attribution = False
+                continue
+
+            if not in_attribution and line:
                 shakespeare_lines.append(line)
     return shakespeare_lines
 

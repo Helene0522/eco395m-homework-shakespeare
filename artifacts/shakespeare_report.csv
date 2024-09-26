@@ -10,9 +10,9 @@ love,2053
 hath,1941
 man,1835
 tis,1405
-time,1264
 speak,1165
 duke,1071
+time,1046
 exeunt,1035
 heart,985
 exit,984
@@ -39,7 +39,6 @@ pray,730
 day,719
 son,691
 eyes,690
-long,666
 leave,651
 blood,639
 night,630
@@ -80,15 +79,12 @@ fool,461
 hold,460
 thine,455
 mistress,450
+long,448
 dear,447
 bring,444
 falstaff,444
-service,440
-copies,438
 soul,437
-distributed,437
 friend,436
-electronic,436
 place,430
 dost,429
 stay,426
@@ -118,7 +114,6 @@ sword,347
 heard,345
 nature,344
 rest,344
-william,341
 bid,337
 truth,330
 rome,325
@@ -171,7 +166,6 @@ cousin,258
 break,257
 sleep,257
 crown,257
-shakespeare,256
 majesty,256
 body,256
 send,256
@@ -194,7 +188,6 @@ thoughts,246
 lies,245
 left,245
 letter,244
-works,243
 cassio,243
 fly,241
 villain,241
@@ -202,19 +195,15 @@ speed,240
 mad,240
 justice,238
 syracuse,238
-complete,237
 times,236
 beat,234
 child,232
 tomorrow,232
-charges,232
 business,232
 high,231
-personal,231
 titus,230
 valentine,230
 days,229
-project,229
 cassius,229
 lear,229
 wrong,228
@@ -231,30 +220,13 @@ beseech,223
 dromio,223
 sun,222
 worthy,222
-permission,222
+service,222
 horse,221
-library,221
-college,221
-distribution,220
-includes,220
 antipholus,220
 proteus,220
-machine,219
 desire,218
 foul,218
 sound,218
-version,218
-copyright,218
-gutenberg,218
-etext,218
-illinois,218
-benedictine,218
-readable,218
-commercially,218
-prohibited,218
-commercial,218
-download,218
-membership,218
 pity,217
 gold,217
 devil,217
@@ -548,6 +520,7 @@ morning,124
 sense,124
 claud,124
 camillo,124
+william,123
 sport,123
 walk,123
 twere,123
@@ -1754,6 +1727,7 @@ cave,39
 prologue,39
 month,39
 windsor,39
+shakespeare,38
 fairer,38
 store,38
 clock,38
@@ -2501,6 +2475,7 @@ forsake,25
 perfection,25
 compare,25
 shade,25
+works,25
 hung,25
 ugly,25
 offences,25
@@ -3169,6 +3144,7 @@ milford,19
 ado,19
 owl,19
 impatient,19
+complete,19
 aloof,19
 wag,19
 untimely,19
@@ -3919,6 +3895,7 @@ peruse,14
 scale,14
 traveller,14
 jades,14
+charges,14
 notable,14
 hinder,14
 subscribe,14
@@ -4150,6 +4127,7 @@ sweep,13
 leaf,13
 shroud,13
 prompt,13
+personal,13
 mangled,13
 hautboys,13
 swifter,13
@@ -4556,6 +4534,7 @@ virgins,11
 murders,11
 baser,11
 designs,11
+project,11
 balance,11
 curd,11
 malady,11
@@ -9437,6 +9416,7 @@ sleepst,4
 conjured,4
 signifies,4
 advances,4
+permission,4
 withholds,4
 unkindest,4
 observed,4
@@ -9752,6 +9732,7 @@ cicatrice,3
 dilated,3
 prologues,3
 appliance,3
+college,3
 impostor,3
 lending,3
 impudence,3
@@ -11580,6 +11561,7 @@ regia,3
 celsa,3
 senis,3
 armoury,3
+library,3
 nows,3
 cramps,3
 tang,3
@@ -12413,6 +12395,7 @@ owns,2
 braggd,2
 quakd,2
 overtaen,2
+distribution,2
 soothing,2
 parasites,2
 hyperbolical,2
@@ -13825,6 +13808,7 @@ bricklayer,2
 bucks,2
 felony,2
 cheapside,2
+copies,2
 cottages,2
 killingworth,2
 withstand,2
@@ -14966,6 +14950,7 @@ unmannerd,2
 butcheries,2
 exhales,2
 deluge,2
+includes,2
 stripling,2
 joyless,2
 plagud,2
@@ -16955,6 +16940,7 @@ quierd,1
 inherent,1
 valiantness,1
 evade,1
+distributed,1
 favourd,1
 insisting,1
 reind,1
@@ -17603,6 +17589,7 @@ clays,1
 oerhasty,1
 impotence,1
 welltook,1
+machine,1
 solicitings,1
 prescripts,1
 repulsed,1
